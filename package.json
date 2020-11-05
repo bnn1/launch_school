@@ -1,0 +1,22 @@
+{
+  "name": "public_launch_school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bnn1/launch_school.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bnn1/launch_school/issues"
+  },
+  "homepage": "https://github.com/bnn1/launch_school#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
