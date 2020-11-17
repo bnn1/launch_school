@@ -1,55 +1,42 @@
-const prompt = require("./my_modules/prompt");
+// the problem
+/*
+* Function that checks if a given number is 'narcissistic' 
+* That means that the number is equal to sum of each of its digit to the power of number length
+  * only valid integers will be passed
+  * input: number
+  * output: boolean (true or false)
+Examples and Test Cases
+    1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
 
-function times(number1, number2) {
-  let result = number1 * number2;
-  return result;
-}
-// The problem
+Data Structures
 
-/* Use the times function shown below to write a program that logs the value of 1! 
-(one factorial), 2! (two factorial), 3!, 4!, and 5! (five factorial) to the console. 
-factorial is a multiplication of all the numbers up to given number
+numbers to make calculations
+arrays to split the initial number
 
-// Examples and Test cases
+Algorithm 
 
-1! =	1 =	1
-2! =	1 * 2 =	2
-3! =	1 * 2 * 3 =	6
-4! =	1 * 2 * 3 * 4 =	24
-5! =	1 * 2 * 3 * 4 * 5 =	120
-
-
-// Data structures 
-
-Number
-
-// Algorithm 
-Ask for a number factorial of which we need
-if the number is 1, return 1
-else find factorial of previous number and multiply it by current number
+Split the number into an array
+Make a var to store array length 
+For each element of the array power it to the array length (map)
+Sum the resulting array (reduce)
+Check if the value is the same as the input
 */
 
-function factorial(num) {
-  if (num === 1) return times(1, 1);
-  else return factorial(num - 1) * num;
-  
-}
-let fact5 = factorial(5);
-console.log(fact5);
+// function narcissistic(value) {
+//   let arrayOfNums = String(value).split("");
+//   let power = arrayOfNums.length;
+//   let poweredNumbers = arrayOfNums.map( num => num ** power);
+//   let resultingNumber = poweredNumbers.reduce( (acc, number) => {
+//     return acc + number;
+//   }, 0);
+//   return resultingNumber === value;
+// }
 
+// console.log(narcissistic(7));
+// console.log(narcissistic(371));
 
-let aNumber = 5;
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let strLength = 3;
+let strChars = '123'.split('');
 
-function modifyNumber(num) {
-  aNumber = 7;
-}
-
-function modifyParameter(aNumber) {
-  aNumber += 2;
-}
-
-modifyNumber(aNumber);
-console.log(aNumber);
-
-modifyParameter(aNumber);
-console.log(aNumber);
+strChars.reduce((acc, val, index) => {});
