@@ -26,8 +26,21 @@
 
 const integerToString = require('./number_to_string');
 
-function signedIntegerToString(number) {}
-
+function signedIntegerToString(number) {
+  const sign = Math.sign(number);
+  let convertedNumber;
+  if (sign === -1) {
+    number *= -1;
+    convertedNumber = integerToString(number).split('');
+    convertedNumber.unshift('-');
+    convertedNumber = convertedNumber.join('');
+  } else if (sign === 1) {
+    convertedNumber = integerToString(number).split('');
+    convertedNumber.unshift('+');
+    convertedNumber = convertedNumber.join('');
+  } else convertedNumber = integerToString(number);
+  return convertedNumber;
+}
 console.log(signedIntegerToString(4321) === '+4321');
 console.log(signedIntegerToString(-123) === '-123');
 console.log(signedIntegerToString(0) === '0');
